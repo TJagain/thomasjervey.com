@@ -1,12 +1,12 @@
 import { Badge } from "@/components/ui/badge"
 
-const languages = [
+/*const languages = [
   "Lua", "Java", "Python", "JavaScript", "C++", "TypeScript", "SQL"
 ]
 const skills2 = [
   "3D Modeling", "Game Design", "Level Design", "AI Programming",
   "Version Control (Git)", "Agile Development"
-]
+]*/
 
 const skills = {
   professional: ["Game Design", "Game Development", "Programming"],
@@ -31,7 +31,7 @@ export function SkillsSection() {
             </Badge>
           ))} */}
           {Object.entries(skills).map(([skillType, skillList]) => (
-            <div>
+            <div key={skillType}>
             {skillList.map((skill, index) => (
               <Badge key={index} variant="secondary" className="text-lg py-2 px-4">
                 {skill}
