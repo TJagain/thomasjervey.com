@@ -6,8 +6,8 @@ import { Header } from "@/components/header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "John Doe - Game Developer Portfolio",
-  description: "Portfolio of John Doe, an aspiring game developer showcasing projects and skills.",
+  title: "Thomas Jervey - Game Developer Portfolio",
+  description: "Portfolio of Thomas Jervey, an aspiring game developer showcasing projects and skills.",
 }
 
 export default function RootLayout({
