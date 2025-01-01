@@ -49,20 +49,25 @@ export function ContactForm() {
   // }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-md mx-auto">
-      <div>
-        <Input type="text" placeholder="Your Name" required />
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Get in Touch</h2>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-md mx-auto">
+          <div>
+            <Input type="text" placeholder="Your Name" required />
+          </div>
+          <div>
+            <Input type="email" placeholder="Your Email" required />
+          </div>
+          <div>
+            <Textarea placeholder="Your Message" required />
+          </div>
+          <Button type="submit" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </Button>
+        </form>
       </div>
-      <div>
-        <Input type="email" placeholder="Your Email" required />
-      </div>
-      <div>
-        <Textarea placeholder="Your Message" required />
-      </div>
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Send Message"}
-      </Button>
-    </form>
+    </section>
   )
 }
 
