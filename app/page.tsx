@@ -8,7 +8,7 @@ import { ContactForm } from '@/components/contact-form'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 md:p-12 lg:p-24">
       <Hero />
       <Projects />
       <SkillsSection />
