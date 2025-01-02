@@ -54,13 +54,13 @@ export function ContactForm() {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Get in Touch</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-md mx-auto">
           <div>
-            <Input type="text" placeholder="Your Name" required />
+            <Input type="text" placeholder="Your Name" required {...register("name")}/>
           </div>
           <div>
-            <Input type="email" placeholder="Your Email" required />
+            <Input type="email" placeholder="Your Email" required {...register("email")}/>
           </div>
           <div>
-            <Textarea placeholder="Your Message" required />
+            <Textarea placeholder="Your Message" required {...register("message")}/>
           </div>
           <Button type="submit" className="w-full" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send Message"}
